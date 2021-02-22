@@ -10,6 +10,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import PrintIcon from '@material-ui/icons/Print';
 import SettingsIcon from '@material-ui/icons/Settings';
+import InboxIcon from '@material-ui/icons/Inbox';
+import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import EmailRow from "./EmailRow.js";
 
 
@@ -33,17 +36,27 @@ function EmailList() {
 
             </div>
             <div className="emailList__section">
-                        <Section Icon={ChevronLeftIcon} name="Primary" color="red" selected={true} />
-                        <Section Icon={ChevronLeftIcon} name="Primary" color="blue" selected={false} />
-                        <Section Icon={ChevronLeftIcon} name="Primary" color="green" selected={false} />
+                        <Section Icon={InboxIcon} name="Primary" color="red" selected={true} />
+                        <Section Icon={SupervisorAccountIcon} name="Social" color="blue" selected={false} />
+                        <Section Icon={LocalOfferIcon} name="Promotions" color="green" selected={false} />
                 </div>
                 <div className="emailList__list">
                     <EmailRow  
                         title="Twitch"
                         subject="Hey !! mike"
-                        description="This is test vwenbiwuebuiwebuivbewiuvbuiwebvuibewuibvuiewbuivbeuivbuievuivuiewbv"
+                        description="This is test "
                         time="10pm"
                     />
+                    <EmailRow  
+                        title="Youtube"
+                        subject="Hey !! mike"
+                        description="This is another test of text overflow if happen then then the ellipse"
+                        time="10pm"
+                    />
+
+                    
+                    
+                    
                 </div>
         </div>
     )

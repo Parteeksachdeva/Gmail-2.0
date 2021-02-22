@@ -10,16 +10,17 @@ import {
 } from "react-router-dom";
 import Mail from "./components/Mail";
 import EmailList from "./components/EmailList";
+import SendMail from "./components/SendMail.js"
+import { useState } from "react";
 
 function App() {
-    
+    const [sendMessageisOpen,setsendMessageisOpen ]= useState(false);
   return (
     <Router>
     <div className="app">
       <Header />
       <div className="app__body">
-        <Sidebar />
-
+        <Sidebar isOpen={setsendMessageisOpen}/>
         <Switch>
             <Route path="/mail">
                 <Mail />
@@ -28,7 +29,8 @@ function App() {
                 <EmailList />
             </Route>
         </Switch>
-      </div>   
+      </div>
+      {sendMessageisOpen && <SendMail isOpen={setsendMessageisOpen} />}
     </div>
     </Router>
    );

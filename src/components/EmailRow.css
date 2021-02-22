@@ -19,9 +19,9 @@
     align-items: center;
     font-size: 13px;
 }
-.emailRow__message > h4{
-    width:400px;
+.emailRow__message > h3{
     white-space: nowrap;
+    width:400px;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 5px;
